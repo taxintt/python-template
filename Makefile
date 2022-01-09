@@ -9,12 +9,12 @@ all: test lint
 
 .PHONY: lint
 lint:  .venv ## Run linter
-	.venv/bin/pre-commit run --all-files
+	poetry run pre-commit run --all-files
 
 
 .PHONY: test
 test:  .venv ## Run test
-	.venv/bin/tox
+	poetry run tox
 
 
 .PHONY: pytest
