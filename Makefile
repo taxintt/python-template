@@ -8,12 +8,12 @@ all: test lint
 
 
 .PHONY: lint
-lint:  .venv ## Run linter
+lint:  ## Run linter
 	poetry run pre-commit run --all-files
 
 
 .PHONY: test
-test:  .venv ## Run test
+test:  ## Run test
 	poetry run tox
 
 
@@ -26,4 +26,3 @@ pytest:  ## Run pytest
 distclean:  ## Clean up environment
 	rm -rf build dist src/*.egg-info .tox .mypy_cache .pytest_cache .coverage .coverage.* htmlcov
 	find src tests -name __pycache__ -type d | xargs rm -rf __pycache__
-	rm -rf .venv
