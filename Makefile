@@ -19,15 +19,7 @@ test:  .venv ## Run test
 
 .PHONY: pytest
 pytest:  ## Run pytest
-	PYTHONPATH=src .venv/bin/python -m pytest tests -x --ff
-
-
-.PHONY: freshup
-freshup: distclean  ## Clean up environment
-	# (re)create python virtual environment
-	python -m venv .venv
-	.venv/bin/pip install -U pip setuptools wheel
-	.venv/bin/pip install -r requirements/requirements-dev.in
+	PYTHONPATH=src poetry run pytest tests -x --ff
 
 
 .PHONY: distclean
