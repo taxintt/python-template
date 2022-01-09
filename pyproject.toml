@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "py-project-template"
+version = "0.1.0"
+description = "This is the template of python project"
+authors = ["taxintt <nthouse14@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+include = [
+  "CHANGES.rst",
+  "docs",
+  "poetry.lock",
+  "tests",
+  "tox.ini",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.71.0"
+
+[tool.poetry.dev-dependencies]
+tox = "^3.24.5"
+pre-commit = "^2.16.0"
+pytest = "^6.2.5"
+coverage = {extras = ["toml"], version = "^6.2"}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
