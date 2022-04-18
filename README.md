@@ -2,6 +2,6 @@
 This is the template of python project.
 
 - poetry
-- pytest
+- pytest (w/ pytest-cov)
 - tox
 - pre-commit
