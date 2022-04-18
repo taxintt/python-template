@@ -19,7 +19,7 @@ test:  ## Run test
 
 .PHONY: pytest
 pytest:  ## Run pytest
-	PYTHONPATH=src poetry run pytest tests -x --ff
+	PYTHONPATH=src poetry run pytest tests -x --ff --cov=src --cov-report html
 
 
 .PHONY: distclean
